@@ -1,0 +1,21 @@
+{
+  "name": "JLPT KanjiStudy Shuffle",
+  "version": "1.0",
+  "description": "Extension to shuffle kanji's",
+  "background": {
+    "scripts": ["lib/jquery.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://jlptstudy.net/*kanji-list"],
+      "css": [],
+      "js": ["lib/jquery.js", "popup.js", "shuffle.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["declarativeContent", "activeTab"],
+  "manifest_version": 2
+}
